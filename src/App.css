@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 @import "./styles/constants.css";
 
-html, body, #root {
-  max-width: 100vw;
+html,
+body,
+#root {
+  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   height: 100%;
   box-sizing: border-box;
   font-size: 18px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
@@ -27,7 +32,7 @@ main {
 
 /* CARD AREA */
 .cardArea {
-  background-image: url('/images/bg-main-mobile.png');
+  background-image: url("/images/bg-main-mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -52,7 +57,7 @@ main {
 .frontCard {
   position: absolute;
   right: 8rem;
-  bottom: -4rem;
+  top: 12rem;
 }
 
 .cardLogo {
@@ -61,12 +66,15 @@ main {
   top: 1rem;
 }
 
-.cardNum, .cardName, .cardDate {
+.cardNum,
+.cardName,
+.cardDate {
   position: absolute;
   color: var(--clr-white);
 }
 
-.cardName, .cardDate {
+.cardName,
+.cardDate {
   bottom: 1.5rem;
   font-weight: 400;
 }
@@ -86,4 +94,82 @@ main {
   text-align: center;
   padding: 0 1rem;
   font-size: 2rem;
+}
+
+/* FORM */
+.form {
+  padding: 12rem 2rem;
+  padding-bottom: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+input {
+  border: 2px solid var(--clr-light-violet);
+  border-radius: 5px;
+  padding: 0.5rem;
+  color: var(--clr-dark-violet);
+}
+
+input::placeholder,
+input {
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: var(--clr-light-violet);
+}
+
+input:active,
+input:focus {
+  outline: none;
+  border: solid 2px transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right,hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.expInputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.expInputs input {
+  width: 100%;
+  min-width: 30%;
+}
+
+.formCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  color: var(--clr-dark-violet);
+  margin-bottom: 0.5rem;
+}
+
+.conBtn {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background-color: var(--clr-dark-violet);
+  color: var(--clr-white);
+  border: none;
+  border-radius: 5px;
 }
