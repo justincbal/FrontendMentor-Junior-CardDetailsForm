@@ -117,6 +117,7 @@ input {
   border-radius: 5px;
   padding: 0.5rem;
   color: var(--clr-dark-violet);
+  min-width: 100px;
 }
 
 input::placeholder,
