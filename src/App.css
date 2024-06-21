@@ -107,7 +107,7 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
   max-width: 450px;
 }
@@ -142,6 +142,7 @@ input:focus {
 .formRow {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .expInputs {
@@ -161,7 +162,7 @@ input:focus {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 label {
@@ -180,13 +181,64 @@ label {
   color: var(--clr-white);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
 
-@media (min-width: 800px) {
+.error {
+  position: absolute;
+  bottom: -34%;
+  font-size: .8rem;
+  color: var(--clr-red);
+}
+
+.errorBorder {
+  border: 2px solid var(--clr-red);
+}
+
+.cvcError, .dateError {
+  position: relative;
+  font-size: .8rem;
+  color: var(--clr-red);
+  bottom: -10%;
+}
+
+.success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0rem 12rem;
+  /* max-width: 450px; */
+}
+
+.success > img {
+  aspect-ratio: 1/1;
+  width: 100px;
+}
+
+.success > button {
+  width: 100%;
+}
+
+.success > h1 {
+  color: var(--clr-dark-violet);
+}
+
+.success > p {
+  color: var(--clr-gray-violet);
+}
+
+@media (min-width: 1000px) {
   main {
     grid-template-rows: none;
     grid-template-columns: 1fr 2fr;
   }
+
+  /* .dateError, .cvcError {
+    bottom: -30% !important;
+
+  } */
 
   .cardArea {
     background-image: url("/images/bg-main-desktop.png");
@@ -207,5 +259,9 @@ label {
     justify-content: center;
     align-items: center;
     padding: 0 12rem;
+  }
+
+  .formCol {
+    /* height: auto !important; */
   }
 }
