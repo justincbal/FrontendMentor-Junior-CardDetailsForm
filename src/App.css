@@ -44,7 +44,7 @@ main {
 .backCard {
   position: absolute;
   right: 3rem;
-  top: 5rem;
+  top: 2rem;
 }
 
 .backText {
@@ -57,7 +57,7 @@ main {
 .frontCard {
   position: absolute;
   right: 8rem;
-  top: 12rem;
+  top: 10rem;
 }
 
 .cardLogo {
@@ -208,7 +208,7 @@ label {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 0rem 12rem;
+  padding: 2rem 8rem;
   /* max-width: 450px; */
 }
 
@@ -233,6 +233,7 @@ label {
   main {
     grid-template-rows: none;
     grid-template-columns: 1fr 2fr;
+    height: 100%;
   }
 
   /* .dateError, .cvcError {
@@ -246,12 +247,13 @@ label {
 
   .frontCard {
     right: -15%;
+    top: 5rem;
   }
 
   .backCard {
     /* right: -12rem; */
     right: -40%;
-    top: 27rem;
+    top: 20rem;
   }
 
   .form {
@@ -265,3 +267,4 @@ label {
     /* height: auto !important; */
   }
 }
+
